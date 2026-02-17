@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: vault-api
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/vault_db}
+    username: ${DATABASE_USERNAME:vault}
+    password: ${DATABASE_PASSWORD:vault}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
