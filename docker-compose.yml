@@ -4,8 +4,8 @@ services:
     container_name: vault_db
     restart: always
     environment:
-      POSTGRES_USER: vault
-      POSTGRES_PASSWORD: vault
+      POSTGRES_USER: ${DATABASE_USERNAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
       POSTGRES_DB: vault_db
     ports:
       - "5432:5432"
